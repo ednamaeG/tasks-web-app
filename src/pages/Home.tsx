@@ -9,7 +9,7 @@ import { useAuth } from '../providers/AuthProvider';
 import Header from '../components/Header';
 import CreatedDate from '../components/CreatedDate';
 import Layout from '../components/Layout';
-
+import '../styles/Home.css'
 export default function Home() {
     const auth = useAuth();
     const { loading, data } = useQuery(GET_USER_TASKS, {
@@ -26,7 +26,7 @@ export default function Home() {
 
     useEffect(() => {
         if (data) {
-          
+
             setUserTasks(data.userTasks);
         }
     }, [data]);
@@ -102,27 +102,29 @@ export default function Home() {
     return (
         <div>
             <Layout>
-                <Container className='mt-5'>
-                    <h4>Welcome {auth.user.first_name}!</h4>
-                    <Row className='p-4 mt-4 d-flex justify-content-center'>
-                        <Col lg={10}>
-                            <Form>
-                                <Form.Group className="mb-3" controlId="formNewTask">
-                                    <Form.Control type="text" placeholder="Add a task..." value={newTaskText} onChange={(e) => updateText(e.target.value)} />
-                                </Form.Group>
-                            </Form>
-                        </Col>
+                <div className='content'>
+                    <Container className='mt-4 mb-5'>
+                        <h4>Welcome {auth.user.first_name}!</h4>
+                        <Row className='p-4 mt-4 d-flex justify-content-center'>
+                            <Col lg={10}>
+                                <Form>
+                                    <Form.Group className="mb-3" controlId="formNewTask">
+                                        <Form.Control type="text" placeholder="Add a task..." value={newTaskText} onChange={(e) => updateText(e.target.value)} />
+                                    </Form.Group>
+                                </Form>
+                            </Col>
 
-                        <Col>
-                            <Button className='btn-info' onClick={addTask}>Add</Button>
-                        </Col>
-                    </Row>
+                            <Col>
+                                <Button className='btn-info' onClick={addTask}>Add</Button>
+                            </Col>
+                        </Row>
 
-                    <h3>All Tasks</h3>
-                    <GetTasks />
+                        <h3>All Tasks</h3>
+                        <GetTasks />
 
 
-                </Container>
+                    </Container>
+                </div>
             </Layout>
         </div>
 

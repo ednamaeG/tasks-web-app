@@ -1,9 +1,12 @@
 .footer{
+
     background-color: rgba(35,170,170,1.00);
     padding: 12px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position:absolute; 
+    bottom:0px; 
+  
+     left:0px; 
+     right:0px;  
 }
 
 .footer-logo{
