@@ -1,0 +1,24 @@
+.header-menu-teal{
+    background-color: rgba(35,170,170,1.00) !important;
+     
+
+ }   
+
+.logo{
+    height: 42px;
+}
+
+
+.dropdown{
+    background-color: #feb708;
+    color: #fff;
+   
+}
+
+.nav-link{
+    color: '#fff';
+}
+
+.dropdown-menu.show{
+    background-color: #feb708;
+}

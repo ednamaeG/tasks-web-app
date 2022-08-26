@@ -1,0 +1,26 @@
+.footer{
+    background-color: rgba(35,170,170,1.00);
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-logo{
+height: 138px;
+padding: 12px;
+}
+
+.footer-details{
+    text-align: left;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.btn-help-center{
+    color: rgba(35,170,170,1.00);
+    border: 0;
+    margin-top: 16px;
+    padding: 6px;
+   
+}
